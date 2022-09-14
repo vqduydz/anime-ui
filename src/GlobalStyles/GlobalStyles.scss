@@ -1,0 +1,67 @@
+@import 'normalize.css';
+@import url('http://fonts.cdnfonts.com/css/circular-std?styles=17909,17910,17911,17912,17907,17908,17905,17906');
+
+// @import url('http://fonts.cdnfonts.com/css/general-sans?styles=135312,135307,135305,135306,135308,135309,135310,135311,135313,135314,135303,135304');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Circular Std', sans-serif;
+    // --font-family: 'General Sans', sans-serif;
+
+    --main-color: #f2bf83;
+
+    --header-height: 72px;
+    --header-acction-height: 36px;
+    --icon-header-height: 24px;
+}
+
+// scrollbar
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    // font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    min-width: 320px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input,
+[tabindex] {
+    background-color: transparent;
+    outline: 1px solid transparent;
+    border: 1px solid transparent;
+}
+
+a[href] {
+    text-decoration: none;
+}

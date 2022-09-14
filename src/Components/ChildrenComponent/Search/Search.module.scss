@@ -1,0 +1,134 @@
+.wrapper {
+    flex: 1;
+    margin: 0 24px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    // width: 100%;
+    min-width: 360px;
+}
+
+.search-content {
+    display: flex;
+    position: relative;
+    input {
+        width: 100%;
+        min-width: 360px;
+        height: var(--header-acction-height);
+        padding: 0px 48px 0px 12px;
+        box-sizing: border-box;
+        border-radius: 6px;
+        display: block;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid transparent;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: var(--font-family);
+        caret-color: var(--main-color);
+        &:focus-within {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: #fff;
+        }
+    }
+}
+
+.search-btn {
+    position: absolute;
+    top: calc((var(--header-acction-height) - var(--icon-header-height)) / 2);
+    right: 8px;
+    fill: rgba(255, 255, 255, 0.6);
+    &:hover {
+        fill: var(--main-color);
+    }
+    &::before {
+        position: absolute;
+        top: calc(2px / 2);
+        left: -8px;
+        content: '';
+        width: 1px;
+        height: calc(var(--icon-header-height) - 2px);
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+.icon {
+    .clear-btn,
+    .loading {
+        position: absolute;
+        top: calc((var(--header-acction-height) - 16px) / 2);
+        right: 48px;
+        width: 16px;
+        height: 16px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.loading {
+    animation: spinner 0.5s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+//search result
+
+.search-result-popper {
+    user-select: none;
+    max-width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    background: rgb(26, 28, 34);
+    max-height: calc((100vh / 4) * 3);
+}
+
+.search-result-container {
+    padding-bottom: 8px;
+    min-width: 360px;
+}
+
+.search-result-title {
+    opacity: 0.6;
+    padding: 8px 16px 8px 16px;
+    border-bottom: 1px solid #333;
+}
+
+// Search Items
+
+.search-item {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 14px 16px;
+    &:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.08);
+    }
+}
+
+.anime-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.anime-title {
+    flex: 1;
+    margin-left: 12px;
+    font-size: 1.4rem;
+    text-align: justify;
+}
