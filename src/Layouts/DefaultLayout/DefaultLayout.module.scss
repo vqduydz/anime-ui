@@ -8,12 +8,11 @@
     width: 100%;
     position: fixed;
     top: 0px;
+    z-index: 100;
 }
 
 .main-content {
     width: 100%;
-    min-height: 1000px;
-    margin: 72px 0;
 }
 
 .footer {

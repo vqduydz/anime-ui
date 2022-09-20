@@ -1,16 +1,19 @@
+function getUiWidth(state) {
+    return state.uiWidth.state;
+}
+
+export { getUiWidth };
+//
+
 function checkLogSelector(state) {
-    return state.checklog.caption;
+    return state.checklog.state;
 }
 
 export { checkLogSelector };
+//
 
 function animeSelector(state) {
-    if (state === undefined) {
-        return;
-    } else {
-        console.log(state);
-        // return state.checkAnime.animeList;
-    }
+    return state.anime.current;
 }
 
 export { animeSelector };

@@ -1,10 +1,12 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { useContext } from 'react';
-
-// import { StoreContext } from '~/Store';
 import Button from '../Button';
 import styles from './UserPopper.module.scss';
+
+import { useDispatch } from 'react-redux';
+
+import { changeLogSlice } from '~/redux/slices';
+
 import {
     faBookmark,
     faChevronCircleRight,
@@ -17,10 +19,14 @@ import {
 const cx = classNames.bind(styles);
 
 function UserPopper() {
-    // const state = useContext(StoreContext);
-    // console.log(state);
-
-    const handleLoguot = () => {};
+    const dispatch = useDispatch();
+    const handleLoguot = () => {
+        dispatch(
+            changeLogSlice.actions.changeLog({
+                state: false,
+            }),
+        );
+    };
 
     return (
         <div className={cx('wrapper')}>

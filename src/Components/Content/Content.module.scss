@@ -1,11 +1,10 @@
 .wrapper {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    background-color: #333;
 }
 .inner {
-    background-color: #333;
-    // width: 1808px;
-    min-height: 1000px;
+    max-width: 1808px;
     width: 100%;
 }
